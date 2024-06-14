@@ -3,6 +3,8 @@ package conta;
 import java.util.Scanner;
 import conta.util.Cores;
 import conta.model.Conta;
+import conta.model.ContaCorrente;
+import conta.model.ContaPoupanca;
 
 public class Menu {
 
@@ -15,7 +17,23 @@ public class Menu {
 		c1.visualizar();
 		c1.depositar(5000.0f);
 		c1.visualizar();
-
+		
+		// Teste da Classe Conta Corrente
+		ContaCorrente cc1 = new ContaCorrente(2, 123, 1, "Mariana", 15000.0f, 1000.0f);
+		cc1.visualizar();
+		cc1.sacar(12000.0f);
+		cc1.visualizar();
+		cc1.depositar(5000.0f);
+		cc1.visualizar();
+		
+		// Teste da Classe Conta Poupança
+		ContaPoupanca cp1 = new ContaPoupanca(3, 123, 2, "Victor", 100000.0f, 15);
+		cp1.visualizar();
+		cp1.sacar(1000.0f);
+		cp1.visualizar();
+		cp1.depositar(5000.0f);
+		cp1.visualizar();
+		
 		Scanner leia = new Scanner(System.in);
 		
 		int opcao;
@@ -57,7 +75,7 @@ public class Menu {
 				
 				break;
 			case 2:
-				System.out.println(Cores.TEXT_WHITE_BOLD + "Listar todos os convidados\n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Listar todas as contas\n\n");
 				
 				break;
 			case 3:
